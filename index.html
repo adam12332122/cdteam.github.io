@@ -1,49 +1,118 @@
-<html>
-    <head>
-        <title>sgin in</title>
-        <link rel="stylesheet" type="text/css" href="adam.css">
-    </head>
-<body>
-    
-    <nav class="menu">
-     <ul>
-      <li><a href="#">Home</a></li>    
-      <li><a href="#">Apps</a></li> 
-      <li><a href="#">Games</a></li>
-      <li><a href="#">Categories</a></li>
-      <li><a href="#">Offers</a></li>
-      <li><a href="#">About</a></li>
-     </ul>
-    
- <form class="search-form">
-     
-     <input type="text" placeholder="search">
-     <button>search</button>
-     
- </form>
-        
-    </nav>
-     
-    <div class="box">
-        
-        <h2>Login</h2>
-        
-        <form>
-            
-            <div class="inputBox">
-             <input type="" name="" required="">
-             <label>Username</label>
-            </div>
-            <div class="inputBox" >
-                <input type="password" name="" required="">
-                <label>Password</label>
-                
-            </div>
-            <input type="submit" name="" value="Submit">
-        </form>
-    </div>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أبو حذيفة الأنصاري</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    
-    
-</body>    
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-bottom: 50px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .circles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 80%;
+        }
+
+        .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .circle:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .circle {
+                width: 90px;
+                height: 90px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .circle {
+                width: 70px;
+                height: 70px;
+                font-size: 0.8em;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>أبو حذيفة الأنصاري</h1>
+        <div class="circles">
+            <div class="circle" onclick="goToLink(1)">الدائرة 1</div>
+            <div class="circle" onclick="goToLink(2)">الدائرة 2</div>
+            <div class="circle" onclick="goToLink(3)">الدائرة 3</div>
+            <div class="circle" onclick="goToLink(4)">الدائرة 4</div>
+            <div class="circle" onclick="goToLink(5)">الدائرة 5</div>
+        </div>
+    </div>
+    <script>
+        function goToLink(circleNumber) {
+            switch(circleNumber) {
+                case 1:
+                    window.location.href = "https://link1.com";
+                    break;
+                case 2:
+                    window.location.href = "https://link2.com";
+                    break;
+                case 3:
+                    window.location.href = "https://link3.com";
+                    break;
+                case 4:
+                    window.location.href = "https://link4.com";
+                    break;
+                case 5:
+                    window.location.href = "https://link5.com";
+                    break;
+                default:
+                    alert("رابط غير موجود!");
+            }
+        }
+    </script>
+</body>
 </html>
